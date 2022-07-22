@@ -1,0 +1,223 @@
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.list {
+  width: 100%;
+  background-color: lightpink;
+  padding: 4rem 0 20rem 0;
+}
+.list__wrapper {
+  width: 80%;
+  max-width: 900px;
+  border: 2px solid black;
+  border-radius: 2rem;
+  background-color: white;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+.list__h1 {
+  font-size: 6em;
+  font-family: "comic_catregular";
+  text-align: center;
+  padding: 1rem 0 0.6rem 0;
+  margin: 0 0 2rem 0;
+  border-bottom: 2px solid black;
+}
+.list__h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.list__h1::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.list__boxinput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 2rem 0;
+}
+.list__input {
+  width: 60%;
+  padding: 1rem 1rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  margin: 0 2rem 0 0;
+}
+.list__add {
+  background-color: lightblue;
+  border-radius: 50%;
+  padding: 0.6rem 1rem;
+  font-size: 1.4em;
+  color: black;
+  cursor: pointer;
+}
+.list__boxtodo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.list__h2 {
+  font-size: 1.4em;
+}
+.list__boxtareas {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.list__boxtarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+  margin: 0.6rem 0;
+  padding: 0.6rem;
+  border-radius: 1rem;
+}
+.list__p {
+  width: 90%;
+}
+.list__check {
+  width: 1rem;
+  margin: 0 0 0 1rem;
+  cursor: pointer;
+}
+.list__check.activo {
+  color: green;
+}
+.list__delete {
+  width: 1rem;
+  margin: 0 0 0 1rem;
+  cursor: pointer;
+}
+.list__delete.activo {
+  color: red;
+}
