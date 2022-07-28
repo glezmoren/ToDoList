@@ -2,17 +2,35 @@
 
 .list{
     width: 100%;
-    background-color: lightpink;
+    background-color: #f15bb5;
     padding: 4rem 0 20rem 0;
     
     &__wrapper{
         width: 80%;
         max-width: 900px;
-        border: 2px solid black;
+        // border: 2px solid black;
         border-radius: 2rem;
         background-color: white;
         margin: auto;
         padding: 3rem 2rem;
+        &.grid {
+            .list__boxtareas{
+                flex-flow: row wrap;
+
+                .list__boxtarea{
+                    width: 36%;
+                    margin: 1rem;
+                    flex-flow: row wrap;
+                    justify-content: flex-start;
+
+                    .list__p{
+                        width: 70%;
+                        text-align: left;
+                    }
+
+                }
+            }
+        }
     }
     &__h1{
         font-size: 6em;
@@ -38,6 +56,21 @@
         }
     }
 
+    &__boxboton{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 2rem 1rem 1rem 0;
+    }
+
+    &__visual{
+        padding: 0.6rem;
+        border-radius: 2rem;
+        // border: 2px solid #fee440;
+        background-color: #fee440;
+        font-family: 'comic_catregular';
+    }
+
     &__boxinput{
         display: flex;
         flex-flow: row nowrap;
@@ -56,12 +89,14 @@
     }
 
     &__add{
-        background-color: lightblue;
+        background-color: #00bbf9 ;
+        // border: 2px solid #00bbf9;
         border-radius: 50%;
-        padding: 0.6rem 1rem;
+        padding: 0.3rem 0.76rem;
         font-size: 1.4em;
         color: black;
         cursor: pointer;
+        font-family: 'comic_catregular';
     }
     &__boxtodo{
         display: flex;
@@ -72,6 +107,8 @@
 
     &__h2{
         font-size: 1.4em;
+        font-family: 'comic_catregular';
+        font-weight: 700;
     }
 
     &__boxtareas{
@@ -79,39 +116,77 @@
         padding: 1rem 2rem;
         width: 100%;
         margin-bottom: 2rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
     }
 
     &__boxtarea{
+        width: 100%;
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
         border: 1px solid black;
         margin: 0.6rem 0;
         padding: 0.6rem;
         border-radius: 1rem;
+        // animation: fadeIn 0.3s ease;
     }
+
+    // @keyframes fadeIn {
+    //     from{
+    //         opacity: 0;
+    //     }
+    //     to{
+    //         opacity: 1;
+    //     }
+        
+    // }
 
     &__p{
-        width: 90%;
+        width: 70%;
+        font-family: 'gelpenuprightmedium';
+        text-align: left;
     }
 
+    &__boxsvg{
+        width: 15%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem 0 0;
+    }
+
+
     &__check{
-        width: 1rem;
+        min-width: 1rem;
+        max-width: 1rem;
         margin: 0 0 0 1rem;
         cursor: pointer;
 
-        &.activo{
+        &:hover{
             color: green;
         }
     }
     &__delete{
-        width: 1rem;
+        min-width: 1rem;
+        max-width: 1rem;
         margin: 0 0 0 1rem;
         cursor: pointer;
 
-        &.activo{
+        &.complet{
+            color: grey;
+        }
+
+        &:hover{
             color: red;
         }
+    }
+    &__fecha{
+        font-family: 'gelpenuprightmedium';
+        
     }
 }

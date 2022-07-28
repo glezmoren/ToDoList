@@ -94,17 +94,37 @@ body {
 
 .list {
   width: 100%;
-  background-color: lightpink;
+  background-color: #f15bb5;
   padding: 4rem 0 20rem 0;
 }
 .list__wrapper {
   width: 80%;
   max-width: 900px;
-  border: 2px solid black;
   border-radius: 2rem;
   background-color: white;
   margin: auto;
   padding: 3rem 2rem;
+}
+.list__wrapper.grid .list__boxtareas {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+.list__wrapper.grid .list__boxtareas .list__boxtarea {
+  width: 36%;
+  margin: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.list__wrapper.grid .list__boxtareas .list__boxtarea .list__p {
+  width: 70%;
+  text-align: left;
 }
 .list__h1 {
   font-size: 6em;
@@ -127,6 +147,25 @@ body {
   width: 100%;
   height: 2px;
   background-color: black;
+}
+.list__boxboton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 2rem 1rem 1rem 0;
+}
+.list__visual {
+  padding: 0.6rem;
+  border-radius: 2rem;
+  background-color: #fee440;
+  font-family: "comic_catregular";
 }
 .list__boxinput {
   display: -webkit-box;
@@ -152,12 +191,13 @@ body {
   margin: 0 2rem 0 0;
 }
 .list__add {
-  background-color: lightblue;
+  background-color: #00bbf9;
   border-radius: 50%;
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 0.76rem;
   font-size: 1.4em;
   color: black;
   cursor: pointer;
+  font-family: "comic_catregular";
 }
 .list__boxtodo {
   display: -webkit-box;
@@ -176,21 +216,37 @@ body {
 }
 .list__h2 {
   font-size: 1.4em;
+  font-family: "comic_catregular";
+  font-weight: 700;
 }
 .list__boxtareas {
   border-radius: 1rem;
   padding: 1rem 2rem;
   width: 100%;
   margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .list__boxtarea {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -203,21 +259,48 @@ body {
   border-radius: 1rem;
 }
 .list__p {
-  width: 90%;
+  width: 70%;
+  font-family: "gelpenuprightmedium";
+  text-align: left;
+}
+.list__boxsvg {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1rem 0 0;
 }
 .list__check {
-  width: 1rem;
+  min-width: 1rem;
+  max-width: 1rem;
   margin: 0 0 0 1rem;
   cursor: pointer;
 }
-.list__check.activo {
+.list__check:hover {
   color: green;
 }
 .list__delete {
-  width: 1rem;
+  min-width: 1rem;
+  max-width: 1rem;
   margin: 0 0 0 1rem;
   cursor: pointer;
 }
-.list__delete.activo {
+.list__delete.complet {
+  color: grey;
+}
+.list__delete:hover {
   color: red;
+}
+.list__fecha {
+  font-family: "gelpenuprightmedium";
 }
